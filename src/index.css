@@ -1,0 +1,70 @@
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #fcfcfa;
+  --color-ink: #1a1a18;
+  --color-muted: #6b6b66;
+  --color-line: #e4e4df;
+  --color-accent: #2643d9;
+  --color-live: #059669;
+
+  --color-track-python: #2643d9;
+  --color-track-python-tint: #edf0fc;
+  --color-track-python-bright: #93a5f5;
+  --color-track-cpp: #b45309;
+  --color-track-cpp-tint: #faf1e7;
+  --color-track-cpp-bright: #fbbf24;
+  --color-track-security: #047857;
+  --color-track-security-tint: #e8f4ef;
+  --color-track-security-bright: #34d399;
+
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent text-paper;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.card-in {
+  animation: card-in 0.25s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .card-in {
+    animation: none;
+  }
+}
