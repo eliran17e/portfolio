@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
     live: 'https://settle-it-two.vercel.app/',
     image: {
       src: '/shots/settleit.png',
-      alt: 'SettleIt — "Start a huddle" screen for creating a group decision room',
+      alt: 'SettleIt — live "Movie night" decision room, inviting the group to join and weigh in',
     },
     role:
       'Team project — my role: architecture + backend (async FastAPI, WebSocket layer, schema, LLM provider abstraction).',
